@@ -78,14 +78,14 @@ async def fignya(message: types.Message):
 #     img.save(f"database/{len(os.listdir)}.png", format="PNG")
 
 
-@dp.message_handler(content_types=ContentType.PHOTO)
-async def process_photo(message: types.Message):
-    photos = message.photo
-    for photo in photos:
-        await photo.download()
-        process_photo(photo.file)
+# @dp.message_handler(content_types=ContentType.PHOTO)
+# async def process_photo(message: types.Message):
+#     photos = message.photo
+#     for photo in photos:
+#         await photo.download()
+#         process_photo(photo.file)
 
 
 
 if __name__ == '__main__':
-    executor.start_polling(dp)
+    executor.start_polling(dp, skip_updates=True)
