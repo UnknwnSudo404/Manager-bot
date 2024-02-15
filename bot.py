@@ -99,6 +99,7 @@ async def save_photo(message: types.Message):
 async def fignya(message: types.Message):
     await message.answer("Я устал /help")
 
-
+# тык
+    
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
